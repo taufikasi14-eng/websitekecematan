@@ -1,0 +1,1023 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    height: 60px;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #03608e;
+    overflow: hidden;
+}
+
+/* ================= LOGO ================= */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    height: 45px;
+    width: auto;
+    display: block;
+}
+
+/* ================= LOGO TEXT ================= */
+.logo-text {
+    font-weight: 700;
+    color: #d4af37;
+    white-space: nowrap;
+}
+
+/* ================= ANIMASI TEXT ================= */
+.animate-text {
+    animation: moveFromMenu 2.5s ease-out forwards;
+}
+
+@keyframes moveFromMenu {
+    from {
+        transform: translateX(300px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* ================= MENU ================= */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+.menu li a:hover {
+    color: #d4af37;
+}
+
+/* ================= HERO ================= */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    animation: gantiBackground 10s infinite;
+
+}
+@keyframes gantiBackground {
+    0% {
+        background-image: url("images/pegawai.jpeg");
+    }
+    33% {
+        background-image: url("images/Blackground.png");
+    }
+    66% {
+        background-image: url("images/kantor camat.webp");
+    }
+    100% {
+        background-image: url("images/Artefak.png");
+    }
+}
+
+
+/* ================= OVERLAY ================= */
+.overlay {
+    position: absolute;
+    inset: 0;
+}
+
+/* ================= HERO CONTENT ================= */
+.hero-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* ================= BADGE ================= */
+.badge {
+    border: 1px solid #d4af37;
+    padding: 8px 22px;
+    border-radius: 30px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #d4af37;
+    margin-bottom: 30px;
+}
+
+/* ================= HERO TITLE ================= */
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #fff;
+
+    /* EFEK 3D */
+    text-shadow:
+        1px 1px 0 #ccc,
+        2px 2px 0 #bbb,
+        3px 3px 0 #aaa,
+        4px 4px 0 #999,
+        5px 5px 15px rgba(0,0,0,0.6);
+
+    transform: perspective(800px) rotateX(20deg);
+    animation: title3D 1.8s ease-out forwards;
+}
+@keyframes title3D {
+    from {
+        transform: perspective(800px) rotateX(60deg) translateY(80px);
+        opacity: 0;
+    }
+    to {
+        transform: perspective(800px) rotateX(20deg) translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* ================= HERO PARAGRAPH ================= */
+.hero p {
+    max-width: 700px;
+    font-size: 18px;
+    line-height: 1.7;
+    opacity: 0.9;
+
+    transform: perspective(600px) translateZ(40px);
+    animation: textFade3D 2.2s ease-out forwards;
+}
+@keyframes textFade3D {
+    from {
+        transform: perspective(600px) translateZ(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: perspective(600px) translateZ(40px);
+        opacity: 1;
+    }
+}
+
+/* ================= SEARCH BOX ================= */
+.search-box {
+    margin-top: 40px;
+    display: flex;
+    background: #fff;
+    border-radius: 50px;
+    overflow: hidden;
+    width: 600px;
+    max-width: 90%;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    padding: 18px 25px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-box button {
+    background: #031f1a;
+    color: #fff;
+    border: none;
+    padding: 0 35px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-box button:hover {
+    background: #054237;
+}
+
+/* ================= MARQUEE TEXT ================= */
+.marquee {
+    position: relative;
+    overflow: hidden;
+    width: 700px;          /* panjang area gerak */
+}
+
+.marquee-text {
+    display: inline-block;
+    padding-left: 100%;
+    white-space: nowrap;
+    font-weight: 700;
+    color: #d4af37;
+    animation: marqueeMove 10s linear infinite;
+}
+
+/* KEYFRAMES */
+@keyframes marqueeMove {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.hero 
+   .hero {
+  position: relative;
+  z-index: 1;
+}
+
+/* ================= MENU LAYANAN ================= */
+.menu-layanan {
+    background: linear-gradient(160deg, #eef5fc, #d7e8f7);
+    padding: 100px 8% 110px;
+    margin-top: -120px;
+    position: relative;
+    z-index: 5;
+}
+
+/* ================= JUDUL ================= */
+.menu-layanan h2 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 800;
+    color: #0b5d8a;
+    margin-bottom: 60px;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.menu-layanan h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 5px;
+    margin: 16px auto 0;
+    background: linear-gradient(90deg, #0b5d8a, #32d27a);
+    border-radius: 6px;
+}
+
+/* ================= GRID ================= */
+.layanan-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+/* ================= CARD ================= */
+.layanan-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px 10px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    box-shadow: 0 14px 35px rgba(0,0,0,0.1);
+    transform: translateY(60px);
+    opacity: 0;
+    animation: cardEnter 0.9s ease forwards;
+}
+
+/* delay animasi */
+.layanan-card:nth-child(1) { animation-delay: 0.15s; }
+.layanan-card:nth-child(2) { animation-delay: 0.3s; }
+.layanan-card:nth-child(3) { animation-delay: 0.45s; }
+.layanan-card:nth-child(4) { animation-delay: 0.6s; }
+
+/* AKSEN GARIS ATAS */
+.layanan-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 7px;
+    width: 100%;
+    background: linear-gradient(90deg, #0b5d8a, #32d27a);
+}
+
+.icon-circle img {
+    width: 100px;
+    height: auto;
+}
+
+/* ================= TEXT ================= */
+.layanan-card h3 {
+    font-size: 21px;
+    font-weight: 700;
+    color: #022b24;
+    margin-top: 12px;
+    letter-spacing: 0.5px;
+}
+
+/* ================= HOVER EFFECT ================= */
+.layanan-card:hover {
+    transform: translateY(-16px) scale(1.04);
+    box-shadow: 0 45px 90px rgba(0,0,0,0.2);
+}
+
+.layanan-card:hover .icon-circle {
+    transform: scale(1.15) rotate(4deg);
+}
+
+/* ================= ANIMASI MASUK ================= */
+@keyframes cardEnter {
+    from {
+        opacity: 0;
+        transform: translateY(80px) scale(0.94);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ================= BERITA TERKINI ================= */
+.berita-terkini {
+    padding: 70px 8%;
+    background: linear-gradient(135deg, #f4f9ff, #ffffff);
+}
+
+/* HEADER */
+.berita-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.berita-header h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #0a3d62;
+    position: relative;
+    padding-left: 14px;
+}
+
+/* AKSEN GARIS JUDUL */
+.berita-header h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, #0a3d62, #f1c40f);
+    border-radius: 6px;
+}
+
+.lihat-semua {
+    color: #0a3d62;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.lihat-semua:hover {
+    text-decoration: underline;
+}
+
+/* LIST */
+.berita-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* CARD BERITA */
+.berita-card {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    transition: all 0.35s ease;
+    position: relative;
+}
+
+/* AKSEN GARIS ATAS */
+.berita-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, #0a3d62, #f1c40f);
+}
+
+.berita-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 22px 45px rgba(0,0,0,0.15);
+}
+
+/* IMAGE */
+.berita-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* TEXT */
+.berita-info {
+    padding: 16px 18px 22px;
+}
+
+.berita-info .tanggal {
+    font-size: 13px;
+    color: #1e90ff;
+    font-weight: 600;
+}
+
+.berita-info h3 {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #0a3d62;
+    line-height: 1.5;
+}
+
+/* LIHAT SEMUA BERITA */
+.lihat-semua-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.lihat-semua-berita {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0a3d62;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+.lihat-semua-berita:hover {
+    border-bottom: 2px solid #0a3d62;
+    padding-bottom: 3px;
+}
+
+/* ================= FOOTER paling bawah  ================= *
+
+/* FOOTER */
+.footer {
+    width: 100vw;
+    background: #b90d9f;
+    color: #ffffff;
+    margin-top: auto;                /* ⬅️ INI PALING PENTING */
+    margin-left: calc(-50vw + 50%);
+}
+
+/* ISI FOOTER */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px 8%;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* KIRI */
+.footer-left {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-logo {
+    width: 70px;
+}
+
+/* GARIS */
+.footer-line {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    margin: 20px 0;
+}
+
+/* COPYRIGHT */
+.footer-bottom {
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: 14px;
+    opacity: 0.85;
+} 
+.dropdown {
+    position: relative;
+}
+
+.arrow {
+    cursor: pointer;
+    margin-left: 4px;
+    color: white;
+}
+
+/* dropdown disembunyikan */
+.dropdown-menu {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background: white;
+    min-width: 220px;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(244, 240, 240, 0.2);
+    display: none;
+    z-index: 999;
+}
+
+/* tampil saat diklik */
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 12px 16px;
+    color: #222;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background: #f2f2f2;
+}
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.arrow {
+    cursor: pointer;
+    margin-left: 4px;
+    color: white;
+    font-size: 12px;
+}
+
+.map-title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    border-left: 6px solid #c0392b;
+    padding-left: 12px;
+    color: #000;
+}
+
+/* ===== LAYOUT KIRI KANAN  Peta Beranda===== */
+.map-content {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+/* ===== KIRI (PETA) ===== */
+.map-left {
+    flex: 1.2;                 /* ⬅️ DIPERKECIL */
+    max-width: 420px;          /* ⬅️ BATAS UKURAN */
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.map-left:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 28px 60px rgba(0,0,0,0.25);
+}
+
+.map-left img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== LINK FULLSCREEN ===== */
+.map-link {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #0c7b93, #0a6173);
+    color: #fff;
+    padding: 10px 22px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    transition: all 0.3s ease;
+}
+
+.map-link:hover {
+    transform: translateX(-50%) scale(1.08);
+    background: linear-gradient(135deg, #0a6173, #084f5e);
+}
+
+/* ================= KANAN (DATA) ================= */
+.map-right {
+    flex: 1;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    height: 520px;              /* tinggi tetap */
+    overflow: hidden;
+}
+
+/* ================= HEADER DATA ================= */
+.data-header {
+    background: linear-gradient(
+        to right,
+        #0a3d62,
+        #1e90ff
+    );
+    color: #ffffff;
+    padding: 20px 22px;
+    position: relative;
+}
+
+.data-header h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+}
+
+.data-header p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* ================= TOMBOL EXPORT ================= */
+.btn-export {
+    margin-top: 14px;
+    background: linear-gradient(
+        to right,
+        #f1c40f,
+        #d4ac0d
+    );
+    color: #2c2c2c;
+    border: none;
+    padding: 9px 18px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-export:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+/* ================= ISI DATA (SCROLLABLE) ================= */
+.data-content {
+    padding: 24px;
+    flex: 1;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+/* ================= SCROLLBAR CUSTOM ================= */
+.data-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.data-content::-webkit-scrollbar-track {
+    background: #eef3f8;
+    border-radius: 10px;
+}
+
+.data-content::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        to bottom,
+        #0a3d62,
+        #1e90ff
+    );
+    border-radius: 10px;
+}
+
+.data-content::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+        to bottom,
+        #08304d,
+        #187bcd
+    );
+}
+
+/* ================= JUDUL DATA ================= */
+.data-content h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0a3d62;
+    margin-bottom: 14px;
+    padding-left: 14px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* GARIS AKSEN JUDUL */
+.data-content h4::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        #0a3d62,
+        #f1c40f
+    );
+    border-radius: 6px;
+}
+
+/* ================= ISI PARAGRAF ================= */
+.data-content p {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* ================= GARIS PEMISAH ================= */
+.data-content hr {
+    margin: 20px 0;
+    border: none;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #ccc,
+        transparent
+    );
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .map-content {
+        flex-direction: column;
+    }
+
+    .map-right {
+        height: auto;
+        border-radius: 14px;
+    }
+
+    .data-content {
+        padding: 20px;
+    }
+}
+
+/* ================= DATA & PETA ================= */
+.statistik-penduduk {
+    padding: 80px 8%;
+    background: linear-gradient(135deg, #f4f9ff, #ffffff);
+    text-align: center;
+}
+
+.judul-data {
+    font-size: 34px;
+    font-weight: 800;
+    color: #0a3d62;
+    margin-bottom: 8px;
+}
+
+.subjudul {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 50px;
+}
+
+/* GRID */
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+}
+
+/* CARD */
+.stat-card {
+    background: #ffffff;
+    padding: 35px 20px;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, #0a3d62, #f1c40f);
+    top: 0;
+    left: 0;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+/* ICON */
+.stat-icon {
+    font-size: 42px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* ANGKA */
+.stat-angka {
+    font-size: 42px;
+    font-weight: 800;
+    color: #0a3d62;
+    margin-bottom: 8px;
+}
+
+/* LABEL */
+.stat-label {
+    font-size: 16px;
+    color: #555;
+    letter-spacing: 0.5px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .judul-data {
+        font-size: 26px;
+    }
+
+    .stat-angka {
+        font-size: 34px;
+    }
+}
+
+/* ================== LAYANAN ================== */
+.layanan-section {
+    padding: 80px 8%;
+    background: linear-gradient(135deg, #f4f9ff, #ffffff);
+}
+
+/* GRID */
+.layanan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+/* CARD LAYANAN (SAMA KAYA DATA) */
+.layanan-item {
+    background: #ffffff;
+    padding: 35px 25px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.35s ease;
+}
+
+/* AKSEN GARIS ATAS (CIRI DATABASE DATA) */
+.layanan-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(
+        to right,
+        #0a3d62,
+        #f1c40f
+    );
+}
+
+/* HOVER */
+.layanan-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+/* ICON / GAMBAR */
+.layanan-item img {
+    width: 130px;
+    height: auto;
+    margin-bottom: 20px;
+    transition: transform 0.35s ease;
+}
+
+.layanan-item:hover img {
+    transform: scale(1.1);
+}
+
+/* JUDUL */
+.layanan-item h3 {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: #0a3d62;
+    letter-spacing: 1px;
+}
+
+/* DESKRIPSI */
+.layanan-item p {
+    font-size: 14px;
+    color: #555;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1.6;
+}
+
+/* ================== WHATSAPP FLOAT ================== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    color: #ffffff;
+    padding: 12px 18px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float img {
+    width: 28px;
+    height: 28px;
+}
+
+.whatsapp-float:hover {
+    background: #1ebe5d;
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* ================= ADMIN OFFLINE ================= */
+.admin-offline {
+    position: fixed;
+    bottom: 90px;
+    right: 25px;
+    background: #0a3d62;
+    color: #ffffff;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+    display: none;
+    z-index: 9999;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .layanan-item img {
+        width: 110px;
+    }
+}
+
+@media (max-width: 600px) {
+    .whatsapp-float span {
+        display: none;
+    }
+}

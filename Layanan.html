@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Data & Peta | Kecamatan Alor Barat Laut</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<script>
+(function () {
+    const waButton = document.getElementById("whatsappButton");
+    if (!waButton) return;
+
+    const now = new Date();
+
+    const day = now.getDay(); // 0=Minggu, 1=Senin
+    const hour = now.getHours();
+
+    const jamMulai = 8;   // 08.00
+    const jamSelesai = 15; // 15.00
+
+    // Senin (1) s/d Jumat (5)
+    const hariKerja = day >= 1 && day <= 5;
+    const jamKerja = hour >= jamMulai && hour < jamSelesai;
+
+    if (hariKerja && jamKerja) {
+        waButton.style.display = "flex";
+    }
+})();
+</script>
+
+<body>
+
+<script>
+function toggleDropdown() {
+    document
+      .getElementById("dropdownBerita")
+      .classList.toggle("show");
+}
+</script>
+
+<nav class="navbar">
+    <div class="logo">
+        <img 
+            src="images/Lambang_Kabupaten_Alor.jpg"
+            class="images/kantor camat.webp"
+        >
+
+        <div class="marquee">
+            <span class="marquee-text">KECAMATAN ALOR BARAT LAUT</span>
+        </div>
+    </div>
+
+    <ul class="menu">
+        <!-- BERANDA -->
+        <li><a href="Peta.html">Beranda</a></li>
+
+        <!-- BERITA -->
+        <li class="dropdown">
+            <a href="berita.html">Berita</a>
+            <span class="arrow" onclick="toggleDropdown()">▾</span>
+
+            <ul class="dropdown-menu" id="dropdownBerita">
+                <li><a href="berita.html">Berita Terbaru</a></li>
+            </ul>
+        </li>
+
+        <!-- DATA & PETA -->
+        <li><a href="data.html" class="active">Data & Peta</a></li>
+
+        <!-- LAYANAN -->
+        <li><a href="layanan.html">Layanan</a></li>
+    </ul>
+</nav>
+<!-- ================== LAYANAN KECAMATAN ================== -->
+<section class="layanan-section">
+    <div class="layanan-grid">
+
+    <!-- KK -->
+    <div class="layanan-item">
+        <img src="images/layanan1.png" alt="KK">
+        <h3>KK</h3>
+        <p>PELAYANAN KARTU KELUARGA</p>>
+    </div>
+
+    <!-- KTP -->
+    <div class="layanan-item">
+        <img src="images/layanan3.jpg" alt="KTP">
+        <h3>KTP</h3>
+        <p>PELAYANAN KARTU TANDA PENDUDUK</p>
+    </div>
+
+    <!-- PINDAH DATANG -->
+    <div class="layanan-item">
+        <img src="images/pindah-datang.png" alt="Pindah Datang">
+        <h3>PINDAH DATANG</h3>
+        <p>PENCATATAN PINDAH DATANG</p>
+    </div>
+
+    <!-- PINDAH KELUAR -->
+    <div class="layanan-item">
+        <img src="images/pindah-keluar.png" alt="Pindah Keluar">
+        <h3>PINDAH KELUAR</h3>
+        <p>PENCATATAN PINDAH KELUAR</p>
+    </div>
+
+</div>
+
+<!-- ================== WHATSAPP FLOAT ================== -->
+<a 
+  href="https://wa.me/6285702567522?text=Halo%20Admin%20Kecamatan%20Alor%20Barat%20Laut,%0ASaya%20ingin%20bertanya%20tentang%20layanan%20kecamatan."
+  class="whatsapp-float"
+  target="_blank"
+  rel="noopener"
+>
+    <img src="images/wa.png" alt="WhatsApp">
+    <span>WhatsApp</span>
+</a>
+
+    <div class="admin-offline" id="adminOffline">
+    Admin Offline<br>
+    <small>Jam Layanan 08.00 – 15.00 WIT</small>
+</div>
+</section>

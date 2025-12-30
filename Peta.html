@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kecamatan Alor Barat Laut</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<script>
+function toggleDropdown() {
+    document
+      .getElementById("dropdownBerita")
+      .classList.toggle("show");
+}
+</script>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+        <img 
+            src="images/Lambang_Kabupaten_Alor.jpg"
+            class="images/kantor camat.webp"
+        >
+
+        <div class="marquee">
+            <span class="marquee-text">KECAMATAN ALOR BARAT LAUT</span>
+        </div>
+  <ul class="menu">
+    <li><a href="Peta.html">Beranda</a></li>
+
+    <!-- MENU BERITA -->
+    <li class="dropdown">
+        <a href="berita.html">Berita</a>
+        <span class="arrow" onclick="toggleDropdown()">▾</span>
+
+        <ul class="dropdown-menu" id="dropdownBerita">
+            <li><a href="berita.html">Berita Terbaru</a></li>
+        </ul>
+    </li>
+
+    <!-- MENU LAIN -->
+    <li><a href="data.html">Data & Peta</a></li>
+
+    <li><a href="layanan.html">Layanan</a></li>
+</ul>
+
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+
+        <span class="badge-anim">
+            SELAMAT DATANG DI PORTAL RESMI
+        </span>
+
+        <h1 class="title-3d">
+            KECAMATAN ALOR BARAT LAUT
+        </h1>
+
+        <p class="text-fade">
+            Pusat informasi publik, layanan administrasi, dan potensi desa
+            yang terintegrasi, transparan, dan melayani.
+        </p>
+
+        <div class="search-box">
+    <input 
+        type="text" 
+        id="searchInput"
+        placeholder="Cari layanan, berita, atau data desa..."
+    >
+    <button onclick="searchPage()">Cari</button>
+</div>
+<div class="data-content" id="searchArea">
+    ...
+</div>
+</section>
+<section class="menu-layanan">
+  <div class="layanan-container">
+<a href="data.html" class="layanan-link">
+  <div class="layanan-card">
+    <div class="icon-circle">
+      <img src="images/logo1.png" alt="">
+    </div>
+    <h3>Struktur Organisasi</h3>
+  </div>
+     
+<a href="berita.html" class="layanan-link">
+  <div class="layanan-card">
+    <div class="icon-circle">
+      <img src="images/image5.png" alt="">
+    </div>
+    <h3>Berita</h3>
+  </div>
+</a>
+
+   <a href="data.html" class="layanan-link">
+  <div class="layanan-card">
+    <div class="icon-circle">
+      <img src="img/data.svg" alt="">
+      <img src="images/logo2.jpg" alt="">
+    </div>
+    <h3>Data & Peta</h3>
+  </div>
+</a>
+    <a href="layanan.html" class="layanan-link">
+  <div class="layanan-card">
+    <div class="icon-circle">
+      <img src="images/logo6.jpg" alt="">
+    </div>
+    <h3>Layanan Online</h3>
+  </div>
+</a>
+
+</section>
+<section class="berita-terkini">
+    <div class="berita-header">
+        <h2>Berita Terkini</h2>
+    </div>
+
+    <div class="berita-list">
+
+    <!-- BERITA 1 -->
+    <div class="berita-card">
+        <img src="images/berita1.jpeg" alt="">
+        <div class="berita-info">
+            <span class="tanggal">24 Desember 2025</span>
+            <h3>Ulat Grayak Mengganas, Petani Alor Barat Laut Bergerak Selamatkan Jagung</h3>
+            <a href="data/Ulat Grayak Mengganas, Petani Alor Barat Laut Bergerak Selamatkan Jagung.html" target="_blank" class="lihat-semua">
+                Read More →
+            </a>
+        </div>
+    </div>
+
+    <!-- BERITA 2 -->
+    <div class="berita-card">
+        <img src="images/berita2.jpeg" alt="">
+        <div class="berita-info">
+            <span class="tanggal">09 Desember 2025</span>
+            <h3>Mengapa Ikan-ikan di Laut Alor Pingsan?</h3>
+            <a href="data/Mengapa Ikan-ikan di Laut Alor Pingsan_.html" target="_blank" class="lihat-semua">
+                Read More →
+            </a>
+        </div>
+    </div>
+
+    <!-- BERITA 3 -->
+    <div class="berita-card">
+        <img src="images/berita3.png" alt="">
+        <div class="berita-info">
+            <span class="tanggal">04 Desember 2025</span>
+            <h3>PENYALURAN INSENTIF KADER POSYANDU DESA DULOLONG TAHUN 2025</h3>
+            <a href="data/PENYALURAN INSENTIF KADER POSYANDU DESA DULOLONG TAHUN 2025 - Desa Dulolong.html" target="_blank" class="lihat-semua">
+                Read More →
+            </a>
+        </div>
+    </div>
+
+</div>
+<!-- LIHAT SEMUA BERITA -->
+<div class="lihat-semua-container">
+    <a href="berita.html" class="lihat-semua-berita">
+        Lihat Semua Berita →
+    </a>
+</div>
+
+         
+<section class="map-section">
+   <div class="berita-header">
+        <h2>Letak Geografis
+        
+        </h2>
+    </div>
+
+    <div class="map-content">
+
+        <!-- KIRI : PETA -->
+        <div class="map-left">
+    <div class="map-card">
+        <img src="images/peta.jpeg" alt="Peta Kecamatan Alor Barat Laut">
+
+        <div class="map-link-outsidw">
+            <a href="index.html" class="map-link-outsidw">
+                Peta Full Screen 🔍
+                
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+        <!-- KANAN : DATA -->
+        <div class="map-right">
+            <div class="data-header">
+                <h3>KECAMATAN ALOR BARAT LAUT</h3>
+                <p>(Data Tahun 2024)</p>
+            </div>
+
+           <div class="data-content">
+    <p>Kabupaten/Kota : KABUPATEN ALOR</p>
+    <p>Kecematan : ALOR BARAT LAUT</p>
+    <p>Jumlah Desa: 18 </p>
+    <hr>
+
+    <h4>Administrasi Penduduk</h4>
+    <p>Jumlah Penduduk : 24.412 Jiwa</p>
+    <p>Laki-laki : 11.966 Jiwa</p>
+    <p>Perempuan : 12.466 Jiwa</p>
+    <hr>
+
+    <h4>Agama</h4>
+    <p>ISLAM: 26,46 % </p>
+    <p>KRISTEN: 5,57 %</p>
+    <p>KATHOLIK: 0,55 %</p>
+    <p>HINDU:-</p>
+    <hr>
+
+    <h4>Status Perkawinan 2024</h4>
+    <p>Kawin : 3.887 Jiwa</p>
+    <p>Belum Kawin : 660 Jiwa</p>
+    <p>Laki-laki : 2.304/323 Jiwa</p>
+    <p>Perempuan : 1.583/337 Jiwa</p>
+    <p>Cerai Hidup: Laki-Laki 13, Perempuan 27 Jiwa</p>
+    <p>Cerai Mati: Laki-Laki 137, Perempuan 494 Jiwa</p>
+</div>
+
+</section>
+<!-- TOMBOL LIHAT SEMUA -->
+    <a href="data.html" class="lihat-semua-data">
+        Lihat Semua Data & Peta →
+    </a>
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- KIRI : LOGO + NAMA -->
+    <div class="footer-left">
+      <img src="images/Lambang_Kabupaten_Alor.jpg" class="footer-logo">
+      <div>
+        <h3>Pemerintah Kecamatan Alor Barat Laut</h3>
+        <p>
+          Jl. Kalabahi-Kokar Alor Barat Laut,<br>
+          Kabupaten Alor, Nusa Tenggara Timur
+        </p>
+      </div>
+    </div>
+
+    <!-- KANAN : KONTAK -->
+    <div class="footer-right">
+      <h3>Hubungi Kami</h3>
+      <p>📞 0857-0256-7522</p>
+      <p>📷 @kec_alorbaratlaut</p>
+    </div>
+
+  </div>
+
+  <!-- GARIS -->
+  <hr class="footer-line">
+
+  <!-- COPYRIGHT -->
+  <div class="footer-bottom">
+    © 2025 Pemerintah Kecamatan Alor Barat Laut
+  </div>
+</footer>
+
+
+</body>
+</html>

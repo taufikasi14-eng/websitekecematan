@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kecamatan Alor Barat Laut</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+        <img 
+            src="images/Lambang_Kabupaten_Alor.jpg"
+            class="images/kantor camat.webp"
+        >
+
+        <div class="marquee">
+            <span class="marquee-text">KECAMATAN ALOR BARAT LAUT</span>
+        </div>
+    </div>
+
+   <ul class="menu">
+    <!-- BERANDA -->
+    <li><a href="peta.html">Beranda</a></li>
+
+    <!-- BERITA + DROPDOWN -->
+    <li class="dropdown">
+        <a href="berita.html">Berita</a>
+        <span class="arrow" onclick="toggleDropdown()">▾</span>
+
+        <ul class="dropdown-menu" id="dropdownBerita">
+            <li><a href="berita.html">Berita Terbaru</a></li>
+            <li><a href="kegiatan.html">Kegiatan</a></li>
+        </ul>
+    </li>
+       <li><a href="data.html">Data & Peta</a></li>
+
+    <!-- LAYANAN -->
+    <li><a href="layanan.html">Layanan</a></li>
+</ul>
+</nav>
+<div class="berita-list">
+
+       <div class="berita-card">
+        <img src="images/berita1.jpeg" alt="">
+        <div class="berita-info">
+            <span class="tanggal">24 Desember 2025</span>
+            <h3>Ulat Grayak Mengganas, Petani Alor Barat Laut Bergerak Selamatkan Jagung</h3>
+            <a href="data/Ulat Grayak Mengganas, Petani Alor Barat Laut Bergerak Selamatkan Jagung.html" target="_blank" class="lihat-semua">
+                Read More →
+            </a>
+        </div>
+    </div>
+
+    <!-- BERITA 2 -->
+    <div class="berita-card">
+        <img src="images/berita2.jpeg" alt="">
+        <div class="berita-info">
+            <span class="tanggal">09 Desember 2025</span>
+            <h3>Mengapa Ikan-ikan di Laut Alor Pingsan?</h3>
+            <a href="data/Mengapa Ikan-ikan di Laut Alor Pingsan_.html" target="_blank" class="lihat-semua">
+                Read More →
+            </a>
+        </div>
+    </div>
+
+    <!-- BERITA 3 -->
+    <div class="berita-card">
+        <img src="images/berita3.png" alt="">
+        <div class="berita-info">
+            <span class="tanggal">04 Desember 2025</span>
+            <h3>PENYALURAN INSENTIF KADER POSYANDU DESA DULOLONG TAHUN 2025</h3>
+            <a href="data/PENYALURAN INSENTIF KADER POSYANDU DESA DULOLONG TAHUN 2025 - Desa Dulolong.html" target="_blank" class="lihat-semua">
+                Read More →
+            </a>
+        </div>
+    </div>
+
+</section>
